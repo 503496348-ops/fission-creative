@@ -27,7 +27,7 @@ from runtime_compat import enable_windows_utf8_stdio
 try:
     from chapter_paths import find_chapter_file
 except ImportError:  # pragma: no cover
-    from scripts.chapter_paths import find_chapter_file
+    from chapter_paths import find_chapter_file
 
 
 def _ensure_scripts_path():

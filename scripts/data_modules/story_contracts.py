@@ -12,7 +12,7 @@ from chapter_outline_loader import volume_num_for_chapter_from_state
 try:
     from security_utils import atomic_write_json
 except ImportError:  # pragma: no cover
-    from scripts.security_utils import atomic_write_json
+    from ..security_utils import atomic_write_json
 
 
 MARKER_BEGIN = "<!-- STORY-SYSTEM:BEGIN -->"

@@ -26,7 +26,7 @@ from .schema import (
 try:
     from security_utils import atomic_write_json, read_json_safe
 except ImportError:  # pragma: no cover
-    from scripts.security_utils import atomic_write_json, read_json_safe
+    from ...security_utils import atomic_write_json, read_json_safe
 
 from filelock import FileLock
 

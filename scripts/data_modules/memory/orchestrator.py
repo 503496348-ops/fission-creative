@@ -17,7 +17,7 @@ from .budget import allocate_limits
 try:
     from chapter_outline_loader import load_chapter_outline
 except ImportError:  # pragma: no cover
-    from scripts.chapter_outline_loader import load_chapter_outline
+    from ...chapter_outline_loader import load_chapter_outline
 
 
 class MemoryOrchestrator:

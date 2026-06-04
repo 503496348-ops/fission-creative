@@ -20,14 +20,14 @@ from runtime_compat import enable_windows_utf8_stdio
 try:
     from project_locator import resolve_project_root
 except ImportError:  # pragma: no cover
-    from scripts.project_locator import resolve_project_root
+    from project_locator import resolve_project_root
 
 try:
     from data_modules.config import DataModulesConfig
     from data_modules.index_manager import IndexManager
 except ImportError:  # pragma: no cover
-    from scripts.data_modules.config import DataModulesConfig
-    from scripts.data_modules.index_manager import IndexManager
+    from data_modules.config import DataModulesConfig
+    from data_modules.index_manager import IndexManager
 
 
 def _to_float(value: Any, default: float = 0.0) -> float:

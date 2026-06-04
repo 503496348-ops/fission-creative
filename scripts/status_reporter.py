@@ -103,9 +103,9 @@ try:
         to_positive_int,
     )
 except ImportError:
-    from scripts.data_modules.config import get_config, DataModulesConfig
-    from scripts.data_modules.index_manager import IndexManager
-    from scripts.data_modules.state_validator import (
+    from data_modules.config import get_config, DataModulesConfig
+    from data_modules.index_manager import IndexManager
+    from data_modules.state_validator import (
         get_chapter_meta_entry,
         is_resolved_foreshadowing_status,
         normalize_foreshadowing_tier,
@@ -884,7 +884,7 @@ class StatusReporter:
             from data_modules.memory.store import ScratchpadManager
         except Exception:
             try:
-                from scripts.data_modules.memory.store import ScratchpadManager
+                from data_modules.memory.store import ScratchpadManager
             except Exception:
                 return []
 

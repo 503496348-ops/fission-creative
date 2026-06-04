@@ -14,12 +14,12 @@ from .story_contracts import read_json_if_exists
 try:
     from chapter_paths import find_chapter_file
 except ImportError:  # pragma: no cover
-    from scripts.chapter_paths import find_chapter_file
+    from ..chapter_paths import find_chapter_file
 
 try:
     from security_utils import atomic_write_json
 except ImportError:  # pragma: no cover
-    from scripts.security_utils import atomic_write_json
+    from ..security_utils import atomic_write_json
 
 
 class _LockedState:

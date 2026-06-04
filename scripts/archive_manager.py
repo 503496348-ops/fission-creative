@@ -52,8 +52,8 @@ try:
     from data_modules.index_manager import IndexManager
     from data_modules.config import get_config
 except ImportError:
-    from scripts.data_modules.index_manager import IndexManager
-    from scripts.data_modules.config import get_config
+    from data_modules.index_manager import IndexManager
+    from data_modules.config import get_config
 
 # Windows UTF-8 编码修复
 if sys.platform == "win32":

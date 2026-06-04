@@ -16,7 +16,7 @@ from typing import Any, Dict, List, Optional
 try:
     from security_utils import atomic_write_json
 except ImportError:  # pragma: no cover
-    from scripts.security_utils import atomic_write_json
+    from ..security_utils import atomic_write_json
 
 VALID_SEVERITIES = {"critical", "high", "medium", "low"}
 VALID_CATEGORIES = {

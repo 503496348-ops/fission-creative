@@ -20,7 +20,7 @@ try:
         load_chapter_plot_structure,
     )
 except ImportError:  # pragma: no cover
-    from scripts.chapter_outline_loader import (
+    from ..chapter_outline_loader import (
         load_chapter_outline,
         load_chapter_plot_structure,
     )

@@ -38,7 +38,7 @@ try:
     from security_utils import atomic_write_json, read_json_safe
 except ImportError:  # pragma: no cover
     # 当以 `python -m scripts.data_modules...` 从仓库根目录运行
-    from scripts.security_utils import atomic_write_json, read_json_safe
+    from ..security_utils import atomic_write_json, read_json_safe
 
 
 @dataclass

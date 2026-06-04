@@ -45,7 +45,7 @@ def _safe_title_for_filename(title: str) -> str:
     try:
         from security_utils import sanitize_filename
     except ImportError:  # pragma: no cover
-        from scripts.security_utils import sanitize_filename
+        from security_utils import sanitize_filename
 
     safe_title = sanitize_filename(cleaned, max_length=60)
     return "" if safe_title == "unnamed_entity" else safe_title
@@ -84,7 +84,7 @@ def extract_chapter_title(project_root: Path, chapter_num: int) -> str:
     try:
         from chapter_outline_loader import load_chapter_outline
     except ImportError:  # pragma: no cover
-        from scripts.chapter_outline_loader import load_chapter_outline
+        from chapter_outline_loader import load_chapter_outline
 
     outline_text = load_chapter_outline(project_root, chapter_num, max_chars=None)
     if not outline_text.startswith("⚠️"):

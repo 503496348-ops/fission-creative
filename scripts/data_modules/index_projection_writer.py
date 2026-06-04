@@ -13,7 +13,7 @@ from .index_manager import ChapterMeta, IndexManager, SceneMeta, StateChangeMeta
 try:
     from chapter_paths import find_chapter_file
 except ImportError:  # pragma: no cover
-    from scripts.chapter_paths import find_chapter_file
+    from ..chapter_paths import find_chapter_file
 
 
 class IndexProjectionWriter:

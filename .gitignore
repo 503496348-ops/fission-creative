@@ -1,0 +1,41 @@
+# Fission Creative
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual Environment
+.venv/
+.venv_*/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Dashboard
+dashboard/frontend/node_modules/
+dashboard/frontend/dist/
+
+# Project
+.project-memory.json.bak
+**/.story-system/commits/
+**/.webnovel/backup/
+**/.webnovel/tmp/
+
+# Environment
+.env
+.env.*
+*.env

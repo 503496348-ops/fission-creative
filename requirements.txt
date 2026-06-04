@@ -1,2 +1,2 @@
--r fission-creative/scripts/requirements.txt
--r fission-creative/dashboard/requirements.txt
+-r ./scripts/requirements.txt
+-r ./dashboard/requirements.txt
