@@ -1,0 +1,18 @@
+{
+  "name": "fission-creative",
+  "version": "6.0.0",
+  "description": "长篇网文创作系统（skills + agents + data chain + RAG）",
+  "author": {
+    "name": "AtomCollide-AI-陈宇锋团队"
+  },
+  "homepage": "https://github.com/AtomCollide-AI-陈宇锋团队/fission-creative",
+  "repository": "https://github.com/AtomCollide-AI-陈宇锋团队/fission-creative",
+  "license": "GPL-3.0",
+  "keywords": [
+    "webnovel",
+    "hermes",
+    "skills",
+    "agents",
+    "rag"
+  ]
+}
