@@ -54,13 +54,23 @@ def _install_safe_tempfile() -> None:
 
 class _SafeTemporaryDirectory(_ORIGINAL_TEMPORARY_DIRECTORY):
     def __init__(self, suffix=None, prefix=None, dir=None, ignore_cleanup_errors=True, *, delete=True):
-        super().__init__(
-            suffix=suffix,
-            prefix=prefix,
-            dir=dir,
-            ignore_cleanup_errors=ignore_cleanup_errors,
-            delete=delete,
-        )
+        import sys
+        if sys.version_info >= (3, 12):
+            super().__init__(
+                suffix=suffix,
+                prefix=prefix,
+                dir=dir,
+                ignore_cleanup_errors=ignore_cleanup_errors,
+                delete=delete,
+            )
+        else:
+            # Python 3.11: TemporaryDirectory doesn't support 'delete' parameter
+            super().__init__(
+                suffix=suffix,
+                prefix=prefix,
+                dir=dir,
+                ignore_cleanup_errors=ignore_cleanup_errors,
+            )
 
 
 def _safe_sqlite_connect(*args, **kwargs):

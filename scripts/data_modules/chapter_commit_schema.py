@@ -274,5 +274,5 @@ def _generated_event_id(chapter: int, index: int, payload: dict[str, Any]) -> st
         if key not in {"event_id", "chapter"}
     }
     raw = json.dumps(stable_payload, ensure_ascii=False, sort_keys=True)
-    digest = hashlib.sha1(raw.encode("utf-8")).hexdigest()[:10]
+    digest = hashlib.sha1(raw.encode("utf-8"), usedforsecurity=False).hexdigest()[:10]
     return f"evt-ch{chapter:03d}-{index:03d}-{digest}"

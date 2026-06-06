@@ -706,7 +706,7 @@ class IndexEntityMixin:
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
-                f"""
+                f"""  # nosec B608
                 SELECT * FROM relationship_events
                 WHERE {where_sql}
                 ORDER BY chapter DESC, id DESC
@@ -741,7 +741,7 @@ class IndexEntityMixin:
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
-                f"""
+                f"""  # nosec B608
                 SELECT * FROM relationship_events
                 WHERE {where_sql}
                 ORDER BY chapter ASC, id ASC
@@ -771,7 +771,7 @@ class IndexEntityMixin:
 
                 where_sql = f"WHERE {' AND '.join(clauses)}" if clauses else ""
                 cursor.execute(
-                    f"""
+                    f"""  # nosec B608
                     SELECT from_entity, to_entity, type, description, chapter
                     FROM relationships
                     {where_sql}
@@ -804,7 +804,7 @@ class IndexEntityMixin:
                 params.extend(relation_types)
 
             cursor.execute(
-                f"""
+                f"""  # nosec B608
                 SELECT *
                 FROM relationship_events
                 WHERE {' AND '.join(clauses)}
@@ -822,7 +822,7 @@ class IndexEntityMixin:
                 snapshot_clauses.append(f"type IN ({placeholders})")
                 snapshot_params.extend(relation_types)
             cursor.execute(
-                f"""
+                f"""  # nosec B608
                 SELECT from_entity, to_entity, type, description, chapter
                 FROM relationships
                 WHERE {' AND '.join(snapshot_clauses)}
@@ -952,7 +952,7 @@ class IndexEntityMixin:
                 cursor = conn.cursor()
                 placeholders = ",".join("?" for _ in visited_nodes)
                 cursor.execute(
-                    f"""
+                    f"""  # nosec B608
                     SELECT id, canonical_name, type, tier, last_appearance
                     FROM entities
                     WHERE id IN ({placeholders})

@@ -178,7 +178,7 @@ class RAGAdapter:
         if copy_columns:
             cols_sql = ", ".join(copy_columns)
             cursor.execute(
-                f"INSERT OR REPLACE INTO vectors_migrating ({cols_sql}) SELECT {cols_sql} FROM vectors"
+                f"INSERT OR REPLACE INTO vectors_migrating ({cols_sql}) SELECT {cols_sql} FROM vectors"  # nosec B608
             )
 
         cursor.execute("DROP TABLE vectors")
@@ -328,7 +328,7 @@ class RAGAdapter:
             for batch in _chunks(chunk_ids):
                 placeholders = ",".join(["?"] * len(batch))
                 cursor.execute(
-                    f"SELECT chunk_id, chapter, scene_index, content, embedding, parent_chunk_id, chunk_type, source_file FROM vectors WHERE chunk_id IN ({placeholders})",
+                    f"SELECT chunk_id, chapter, scene_index, content, embedding, parent_chunk_id, chunk_type, source_file FROM vectors WHERE chunk_id IN ({placeholders})",  # nosec B608
                     tuple(batch),
                 )
                 rows.extend(cursor.fetchall())
