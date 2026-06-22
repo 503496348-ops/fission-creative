@@ -129,7 +129,7 @@ fission-creative/
 │   └── webnovel-dashboard/         #   可视化面板
 ├── scripts/                        # Python 脚本
 │   ├── webnovel.py                 #   CLI 入口
-│   ├── plugin_architecture.py      #   插件架构（对标gpt_academic）
+│   ├── plugin_architecture.py      #   插件架构（插件化架构）
 │   ├── multi_model_query.py        #   多模型并行查询（新增）
 │   ├── pdf_processor.py            #   PDF/LaTeX文档处理（新增）
 │   └── data_modules/               #   核心数据模块
@@ -163,35 +163,6 @@ your-novel-project/
 修仙 · 克苏鲁 · 历史古代 · 历史脑洞 · 古言 · 多子多福 · 女频悬疑 · 宫斗宅斗 · 年代 · 幻想言情 · 悬疑灵异 · 悬疑脑洞 · 抗战谍战 · 无限流 · 替身文 · 末世 · 民国言情 · 游戏体育 · 狗血言情 · 现实题材 · 现言脑洞 · 电竞 · 直播文 · 知乎短篇 · 种田 · 科幻 · 系统流 · 职场婚恋 · 西幻 · 规则怪谈 · 豪门总裁 · 都市异能 · 都市日常 · 都市脑洞 · 青春甜宠 · 高武 · 黑暗题材
 
 </details>
-
----
-
-## 🆚 竞品对标：vs gpt_academic
-
-本项目对标 [gpt_academic](https://github.com/binary-husky/gpt_academic)（70K⭐）的核心能力：
-
-| gpt_academic 能力 | 裂变创作 对应 | 状态 |
-|---|---|---|
-| 模块化插件系统 | `plugin_architecture.py` — PluginRegistry + Pipeline | ✅ 已有 |
-| 多模型并行查询 | `multi_model_query.py` — 多LLM同时查询 + 最优选 | ✅ **新增** |
-| PDF/LaTeX 文档处理 | `pdf_processor.py` — PDF提取 + LaTeX解析 + 章节拆分 | ✅ **新增** |
-| 代码项目分析 | N/A（面向网文创作，非代码分析） | 🔲 不适用 |
-| 长篇一致性管理 | 合同驱动 + 六维审查 + 200万字支持 | ✅ **独有优势** |
-
-### 新增模块说明
-
-**多模型并行查询** (`scripts/multi_model_query.py`):
-- 支持 OpenAI / Anthropic / DeepSeek / Qwen / 本地模型
-- 并行查询多个LLM，对比创意输出
-- 优选策略：priority / fastest / longest / first
-- 插件：`multi_model_compare`（Ctrl+M）、`multi_model_best`（Ctrl+B）
-
-**PDF/文档处理器** (`scripts/pdf_processor.py`):
-- PDF文本提取（PyMuPDF / pdfplumber / pypdf）
-- LaTeX源码解析 → 结构化Markdown
-- 章节感知提取（自动识别"第X章"格式）
-- 参考文档格式化输出（用于写作上下文注入）
-- 插件：`pdf_extract`（Ctrl+D）、`latex_parse`（Ctrl+L）、`chapter_split`（Ctrl+S）
 
 ---
 
