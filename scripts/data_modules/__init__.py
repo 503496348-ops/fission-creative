@@ -99,6 +99,12 @@ _LAZY_EXPORTS: dict[str, tuple[str, str]] = {
     # Memory Contract
     "MemoryContract": (".memory_contract", "MemoryContract"),
     "MemoryContractAdapter": (".memory_contract_adapter", "MemoryContractAdapter"),
+    # AI Flavor Engine
+    "detect_ai_flavor": (".ai_flavor_engine", "detect_ai_flavor"),
+    "AIFlavorReport": (".ai_flavor_engine", "AIFlavorReport"),
+    "DimensionScore": (".ai_flavor_engine", "DimensionScore"),
+    "VoiceProfile": (".ai_flavor_engine", "VoiceProfile"),
+    "calibrate_voice": (".ai_flavor_engine", "calibrate_voice"),
 }
 
 
