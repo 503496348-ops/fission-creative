@@ -5,7 +5,7 @@
     "description": "Marketplace for installing the fission-creative plugin."
   },
   "owner": {
-    "name": "AtomCollide-AI-陈宇锋团队"
+    "name": "AtomCollide-智械工坊团队"
   },
   "plugins": [
     {
@@ -13,7 +13,7 @@
       "description": "长篇网文创作系统（skills + agents + data chain + RAG）",
       "version": "6.0.0",
       "author": {
-        "name": "AtomCollide-AI-陈宇锋团队"
+        "name": "AtomCollide-智械工坊团队"
       },
       "source": "./fission-creative",
       "category": "productivity",

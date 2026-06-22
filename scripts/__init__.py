@@ -5,7 +5,7 @@ This package contains all Python scripts for the webfission-creative plugin.
 """
 
 __version__ = "6.0.0"
-__author__ = "AtomCollide-AI-陈宇锋团队"
+__author__ = "AtomCollide-智械工坊团队"
 
 __all__ = [
     "security_utils",
