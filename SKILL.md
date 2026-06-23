@@ -1,6 +1,6 @@
 ---
 name: fission-creative
-description: 长篇网文创作系统 — 解决AI写作中的「遗忘」和「幻觉」问题，支持200万字量级连载创作。Story System合同驱动+CBN/CPNs/CEN结构化大纲+六维审查+Anti-AI指南。
+description: "AI长文创作引擎。去AI写作痕迹+33类AI模式检测+5维度评分+声纹校准。当需要撰写长文、去除AI味、优化写作风格时使用。"
 version: 6.0.0
 author: AtomCollide-智械工坊团队
 last_refactored: 2026-06-04
