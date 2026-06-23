@@ -9,6 +9,13 @@ requires_tools: [read_file, write_file, patch, search_files, terminal, clarify, 
 requires_toolsets: [file, terminal]
 required_environment_variables:
   - WORKSPACE_ROOT
+
+triggers:
+  - 长文创作
+  - 内容生成
+  - 文章写作
+  - fission
+  - creative
 ---
 
 ## When to use
