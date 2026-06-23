@@ -1,7 +1,7 @@
 ---
 name: fission-creative
 description: "AI长文创作引擎。去AI写作痕迹+33类AI模式检测+5维度评分+声纹校准。当需要撰写长文、去除AI味、优化写作风格时使用。"
-version: 6.0.0
+version: 8.0
 author: AtomCollide-智械工坊团队
 last_refactored: 2026-06-04
 tags: [writing, novel, long-form, story-system, anti-ai, rag]
