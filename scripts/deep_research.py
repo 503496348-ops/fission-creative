@@ -3,7 +3,6 @@
 裂变创作-Fission Creative · Deep Research Engine
 AtomCollide-智械工坊 · 2026
 
-融合自 gpt-researcher (27K⭐, +18) 的深度研究方法论。
 
 能力:
   - DR1: 多查询扩展 (1个主题→N个搜索子查询)

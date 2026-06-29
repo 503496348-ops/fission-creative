@@ -1,6 +1,5 @@
 # AI 味检测与去味指南
 
-> 融合自 humanizer(25.6K⭐)、stop-slop(11.8K⭐)、nuwa-skill(25.3K⭐)、taste-skill(48.9K⭐)
 
 ## 什么是"AI味"？
 
