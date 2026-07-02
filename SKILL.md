@@ -210,3 +210,7 @@ pip install -r requirements.txt
 ## License
 
 GPL-3.0
+## 2026-07-02 融合增强
+
+- 裂变创作新增长文到演示节奏规划：把章节材料转成 hook/context/conflict/proof/payoff 等 8 段 presentation beats。
+
