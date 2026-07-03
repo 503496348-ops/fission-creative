@@ -1,0 +1,41 @@
+{
+  "repo": "fission-creative",
+  "entrypoints": [
+    "dashboard/__main__.py",
+    "dashboard/server.py"
+  ],
+  "smoke_targets": [
+    "dashboard/path_guard.py",
+    "scripts/data_modules/story_runtime_health.py",
+    "scripts/product_convergence_gate.py",
+    "scripts/validate_csv.py"
+  ],
+  "known_external_reference_files": [
+    "docs/superpowers/plans/2026-04-03-phase1-cleanup.md",
+    "docs/superpowers/plans/2026-04-09-v6-migration-completion.md",
+    "docs/superpowers/plans/2026-04-12-story-system-phase1-contract-seed.md",
+    "docs/superpowers/plans/2026-04-12-story-system-phase2-contract-first-runtime.md",
+    "docs/superpowers/plans/2026-04-12-story-system-phase3-chapter-commit-chain.md",
+    "docs/superpowers/plans/2026-04-12-story-system-phase4-event-log-and-override-ledger.md",
+    "docs/superpowers/plans/2026-04-13-story-system-phase5-legacy-downgrade.md",
+    "docs/superpowers/plans/2026-04-14-context-agent-writing-brief-implementation.md",
+    "docs/superpowers/plans/2026-04-15-chain-integrity-fixes.md",
+    "docs/superpowers/plans/2026-04-15-story-system-final-convergence.md",
+    "docs/superpowers/plans/2026-04-16-dashboard-frontend-rebuild.md",
+    "docs/superpowers/plans/2026-04-16-references-genre-alignment.md",
+    "docs/superpowers/plans/2026-06-01-review-critical-fixes.md",
+    "docs/superpowers/specs/2026-04-16-references-completion-spec.md",
+    "modules/research/README.md",
+    "modules/research/deep_explorer.py",
+    "modules/research/parallel_researcher.py",
+    "modules/research/report_publisher.py",
+    "modules/research/research_planner.py",
+    "scripts/data_modules/tests/test_update_master_outline.py",
+    "scripts/multi_model_query.py",
+    "scripts/pdf_processor.py",
+    "scripts/plugin_architecture.py",
+    "scripts/product_convergence_gate.py",
+    "scripts/update_master_outline.py"
+  ],
+  "policy": "External/fusion references are allowed only when explicitly reviewed here; new fusion work must add a smoke target or entrypoint wiring."
+}
