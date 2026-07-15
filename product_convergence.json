@@ -8,7 +8,8 @@
     "dashboard/path_guard.py",
     "scripts/data_modules/story_runtime_health.py",
     "scripts/product_convergence_gate.py",
-    "scripts/validate_csv.py"
+    "scripts/validate_csv.py",
+    "scripts/gpt_researcher_bridge.py"
   ],
   "known_external_reference_files": [
     "docs/superpowers/plans/2026-04-03-phase1-cleanup.md",

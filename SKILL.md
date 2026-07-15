@@ -228,3 +228,12 @@ GPL-3.0
 - `scripts/doctor.py`：检查 README、SKILL、入口脚本、package scripts 与产品收敛门禁。
 - `scripts/smoke.py`：运行 doctor、产品收敛门禁与 Python 编译级冒烟。
 - `tests/test_one_click_open_box.py`：契约测试，防止 README 写了但脚本缺失。
+
+## 2026-07-15 融合增强（P2）
+
+### assafelovic/gpt-researcher -> fission-creative
+
+- 新增 `scripts/gpt_researcher_bridge.py`：提供可复用的长文研究诊断桥接入口（可枚举研究轮次、查询数、来源 Top、报告结构与证据卡）。
+- 新增 `tests/test_gpt_researcher_bridge.py`：验证 sample mode 下可复现的来源追溯输出。
+- `product_convergence.json` 与 `package.json` 补齐桥接 smoke 脚本，纳入产品收敛门禁。
+
