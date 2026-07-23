@@ -237,3 +237,9 @@ GPL-3.0
 - 新增 `tests/test_gpt_researcher_bridge.py`：验证 sample mode 下可复现的来源追溯输出。
 - `product_convergence.json` 与 `package.json` 补齐桥接 smoke 脚本，纳入产品收敛门禁。
 
+
+## 快速开始
+
+```bash
+python3 scripts/cli.py --help
+```
