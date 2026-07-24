@@ -5,13 +5,15 @@ license: MIT
 metadata:
   author: AtomCollide-智械工坊团队
   version: 8.0
-triggers:
-  - 长文创作
-  - 内容生成
-  - 文章写作
-  - fission
-  - creative
 ---
+## 触发条件
+
+- 长文创作
+- 内容生成
+- 文章写作
+- fission
+- creative
+
 
 ## When to use
 
