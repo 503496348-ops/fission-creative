@@ -154,8 +154,92 @@ project-root/
 /webnovel-dashboard
 ```
 
+## 目录结构
+
+```
+fission-creative/
+├── SKILL.md                    # 本文件（主入口）
+├── agents/                     # Agent定义
+│   ├── context-agent.md        # 写前上下文组装
+│   ├── data-agent.md           # 事实提取+commit
+│   ├── reviewer.md             # 六维审查
+│   └── deconstruction-agent.md # 参考书拆解
+├── skills/                     # 7个子Skill
+│   ├── webnovel-init/
+│   ├── webnovel-plan/
+│   ├── webnovel-write/
+│   ├── webnovel-review/
+│   ├── webnovel-query/
+│   ├── webnovel-learn/
+│   └── webnovel-dashboard/
+├── scripts/                    # Python脚本
+│   ├── webnovel.py             # CLI入口
+│   ├── data_modules/           # 核心数据模块
+│   └── ...
+├── templates/                  # 模板
+│   ├── genres/                 # 37个题材模板
+│   └── output/                 # 输出模板
+├── references/                 # 参考资料
+│   ├── genre-profiles.md       # 题材配置
+│   ├── reading-power-taxonomy.md
+│   └── shared/                 # 共享参考
+└── dashboard/                  # 可视化面板
+```
+
+## 依赖
+
+```bash
+pip install -r requirements.txt
+```
+
+## 环境变量
+
+| 变量 | 说明 |
+|------|------|
+| `WORKSPACE_ROOT` | 工作区根目录 |
+| `HERMES_HOME` | Hermes配置目录（默认`~/.hermes`） |
+| `WEBNOVEL_HERMES_HOME` | 自定义Hermes目录 |
+| `WEBNOVEL_PROJECT_ROOT` | 显式指定项目根目录 |
+| `EMBED_BASE_URL/MODEL/API_KEY` | Embedding配置 |
+| `RERANK_BASE_URL/MODEL/API_KEY` | Rerank配置 |
+
+## 题材支持（37种）
+
+修仙、克苏鲁、历史古代、历史脑洞、古言、多子多福、女频悬疑、宫斗宅斗、年代、幻想言情、悬疑灵异、悬疑脑洞、抗战谍战、无限流、替身文、末世、民国言情、游戏体育、狗血言情、现实题材、现言脑洞、电竞、直播文、知乎短篇、种田、科幻、系统流、职场婚恋、西幻、规则怪谈、豪门总裁、都市异能、都市日常、都市脑洞、青春甜宠、高武、黑暗题材
+
+## License
+
+GPL-3.0
+## 2026-07-02 融合增强
+
+- 裂变创作新增长文到演示节奏规划：把章节材料转成 hook/context/conflict/proof/payoff 等 8 段 presentation beats。
+
+## 2026-07-03 产品收敛门禁
+
+- 新增 `scripts/product_convergence_gate.py`：从远端干净 clone 后可运行 `python3 scripts/product_convergence_gate.py --json`，检查 SKILL/README、入口文件、smoke 目标、测试与外部融合引用是否自洽。
+- 新增 `tests/test_product_convergence_gate.py`：确保门禁在产品仓库中真实可执行，避免后续增强只停留在孤岛模块。
+
+## 一键开箱交付
+
+本仓库提供标准一键入口：
+
+- `install.sh`：用户的一条命令安装与冒烟入口。
+- `scripts/setup.py`：安装声明依赖并串联 doctor。
+- `scripts/doctor.py`：检查 README、SKILL、入口脚本、package scripts 与产品收敛门禁。
+- `scripts/smoke.py`：运行 doctor、产品收敛门禁与 Python 编译级冒烟。
+- `tests/test_one_click_open_box.py`：契约测试，防止 README 写了但脚本缺失。
+
+## 2026-07-15 融合增强（P2）
+
+### assafelovic/gpt-researcher -> fission-creative
+
+- 新增 `scripts/gpt_researcher_bridge.py`：提供可复用的长文研究诊断桥接入口（可枚举研究轮次、查询数、来源 Top、报告结构与证据卡）。
+- 新增 `tests/test_gpt_researcher_bridge.py`：验证 sample mode 下可复现的来源追溯输出。
+- `product_convergence.json` 与 `package.json` 补齐桥接 smoke 脚本，纳入产品收敛门禁。
 
 
-## 详细文档
+## 快速开始
 
-完整内容见 `references/full-skill.md`。
+```bash
+python3 scripts/cli.py --help
+```
